@@ -46,7 +46,7 @@ ansible_ssh_pass='passwd'
 
 ## 基本命令
 
-![image-20221202144056836](..\src\image-20221202144056836.png)
+![image-20221202144056836](../src/image-20221202143754906.png)
 
 ## Ansible Module
 
@@ -68,19 +68,22 @@ ansible_ssh_pass='passwd'
 #   指定主机清单    主机组  指定模块    指定动作(参数)
 ansible -i hosts <group> -m shell -a 'hostname'
 ```
+![image-20221202200929209](..\src\image-20221202200929209.png)
+
 - command是ansible默认的模块(不指定模块时，默认就使用ansible模块)
 
 ```bash
-  
-  ```
+#command为默认模块，不需要通过-m 指定
+ansible -i hosts <group>  -a 'lscpu' 
+```
 
-  
+  ![image-20221202200759723](..\src\image-20221202200759723.png)
 
 - script
 
 ```bash
   ansible -i hosts <group> -m script -a 'exp.sh'
-  ```
+```
 
 
 ### 文件相关模块
