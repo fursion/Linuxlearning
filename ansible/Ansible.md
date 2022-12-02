@@ -10,9 +10,9 @@ sudo apt install -y ansible
 ### 配置文件 ansible.cfg
 文件路径 /etc/ansible/ansible.cfg
 1. 分类和优先级
-    ![image-20221202143754906](..\src\image-20221202143754906.png)
+    ![image-20221202143754906](../src/image-20221202143754906.png)
 2. 常用配置参数
-    ![image-20221202143932283](..\src\image-20221202143932283.png)
+    ![image-20221202143932283](../src/image-20221202143932283.png)
 
 ### hosts[主机列表]
 文件路径/etc/ansible/hosts
@@ -68,7 +68,7 @@ ansible_ssh_pass='passwd'
 #   指定主机清单    主机组  指定模块    指定动作(参数)
 ansible -i hosts <group> -m shell -a 'hostname'
 ```
-![image-20221202200929209](..\src\image-20221202200929209.png)
+![image-20221202200929209](../src/image-20221202200929209.png)
 
 - command是ansible默认的模块(不指定模块时，默认就使用ansible模块)
 
@@ -77,7 +77,7 @@ ansible -i hosts <group> -m shell -a 'hostname'
 ansible -i hosts <group>  -a 'lscpu' 
 ```
 
-  ![image-20221202200759723](..\src\image-20221202200759723.png)
+  ![image-20221202200759723](../src/image-20221202200759723.png)
 
 - script
 
